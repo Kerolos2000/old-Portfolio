@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Secular One', sans-serif;
+    background: #040404;
+    color: #fff;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn-outline-warning{
+    transition: 0.7s all;
+}
+.btn-outline-warning:hover {
+    color: #000;
+    background-image: linear-gradient(90deg, #ffdd00, #ff8900);
+    border-color: #ffc107;
+    box-shadow: -7px 3px 20px -3px #ffdd00, 7px 3px 20px -3px #ff8900;
+}
+.toUp{
+    position: fixed;
+    font-size: 2vh;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+    color: rgb(250, 137, 137);
+    cursor: pointer;
+    display: none;
+    animation: toUp 1s ease-in-out infinite alternate;
+}
+@keyframes toUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+::selection {
+    background: #EEE;
+    color: #000;
+}
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+::-webkit-scrollbar-track {
+    background: #333;
+}
+::-webkit-scrollbar-thumb {
+    background: #CCC;
+}
+/* navbar section */
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: flex-end;
+}}
+nav.navbar.navbar-expand-lg a{
+    color: #fff;
+    opacity: 0.8;
+}
+nav.navbar.navbar-expand-lg a:hover, nav.navbar.navbar-expand-lg a:active{
+    color: #fff;
+    opacity: 1;
+}
+svg.svg-inline--fa.fa-bars-staggered {
+    color: white;
+}
+svg.svg-inline--fa.fa-bars {
+    color: white;
+}
+button.navbar-toggler {
+    border: 2px solid #e1cc41;
+    /* #4169e1 */
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: #4169e1;
+}
+
+/* main sectiom */
+#main {
+    height: calc(100vh - 56px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.xs1{
+    color: #ffb300;
+}
+.xs2{
+    color: #ff5722 ;
+}
+span.type{
+    font-size: 3vh;
+}
+
+.content{
+    position: relative;
+}
+.content h2 {
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vh;
+}
+.content h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #ff6363;
+}
+.content h2:nth-child(2){
+    color: #ff6363;
+    animation: animate infinite 3s ease-in-out ;
+}
+@keyframes animate{
+    0%, 100%{
+        clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 60%, 0% 70%, 180% 90%, 0% 100%);
+    }
+}
+
+.titel.col-xl-6.col-lg-6.col-md-6.col-sm-12.col-12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.imgPro.col-xl-6.col-lg-6.col-md-6.col-sm-12.col-12 {
+    display: flex;
+    justify-content: center;
+}
+img.mainImg {
+    width: 35vh;
+    border-radius: 20px;
+    animation:kero 1s ease-in-out infinite alternate;
+    overflow: hidden;
+}
+@keyframes kero{
+    0%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(2deg);
+    }
+}
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #ff000075;
+    transition: width .6s ease;
+}
+
+/* skills section */
+#skills {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* work section */
+#work {
+    display: flex;
+    flex-direction: column;
+}
+.x2 h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #63b8ff;
+}
+.x2 h2:nth-child(2){
+    color: #63b8ff;
+    animation: animate2 infinite 3s ease-in-out ;
+}
+@keyframes animate2{
+    0%, 100%{
+        clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 65%, 0% 75%, 180% 90%, 0% 100%);
+    }
+}
+.card{
+    color: #000;
+}
+.card-body {
+    background: rgba(99, 184, 255, 0.35);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.card-body p {
+    min-height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-body p::-webkit-scrollbar{
+    width: 0.2em;
+}
+.card.text-center {
+    border-radius: 25px;
+    /* max-height: 36vh;
+    overflow-y: overlay; */
+}
+.btn-outline-primary {
+    /* color: #44a5d7d1; */
+    color: #00a8ff;
+    background-color: transparent;
+    border-color: #00a8ff;
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #00a8ff;
+    border-color: #00a8ff;
+}
+.fa-gears,.fa-phone,.fa-list-ul,.fa-gamepad,.fa-images,.fa-utensils,.fa-bold,.fa-burger,.fa-graduation-cap {
+    font-size: 5vh;
+}
+
+
+/* Contact section */
+#Contact {
+    height: 15vh;
+    display: flex;
+}
+.content h2 .x3{
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 5vh;
+}
+.x3 h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #63ffa9;
+    font-size: xx-large;
+}
+.x3 h2:nth-child(2){
+    color: #63ffa9;
+    font-size: xx-large;
+    animation: animate2 infinite 3s ease-in-out ;
+}
+@keyframes animate2{
+    0%, 100%{
+        clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 65%, 0% 75%, 180% 90%, 0% 100%);
+    }
+}
+
+.col-xl-6.col-lg-6.col-md-12.col-sm-12.col-12.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+#footer {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #19211c;
+}
+#footer a,#footer telephone {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+.Tcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.copyP{
+    margin-top: 1rem;
+}
